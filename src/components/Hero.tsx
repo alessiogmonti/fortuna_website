@@ -1,17 +1,19 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Box, Flex, Heading } from '@chakra-ui/react'
 
-export const Hero = ({ title }: { title: string }) => (
+export const Hero = ({ title, subtitle }: { title, subtitle: string }) => (
   <Flex
     justifyContent="center"
     alignItems="center"
     height="100vh"
-    bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
-    bgClip="text"
+    // bgGradient="linear(to-r, heroGradientStart, heroGradientEnd)"
+    // bgClip="text"
   >
-    <Heading fontSize="6vw">{title}</Heading>
+      <Heading fontSize="6vw" color={'gray.100'}>{title}</Heading>
+      <Heading fontSize="1vw" color={'gray.700'}>data-driven <br/> intelligence</Heading>
   </Flex>
 )
 
 Hero.defaultProps = {
-  title: 'with-chakra-ui-typescript',
+  title: 'FORTUNA',
+  subtitle: 'market dynamics'
 }
